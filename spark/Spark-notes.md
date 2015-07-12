@@ -1,4 +1,4 @@
-## Notes from Learning Spark book 
+## Notes from Learning Spark book
 ### Partitioning in Spark
 
 Many of the Spark's operation involves shuffling of the data acroos the networks. Partitioning of the RDDs will help all of these operations. Some of the operations that benefits from partitioning are:
@@ -15,3 +15,6 @@ Operations that result in a partitioner being set on the output RDD are:
 > cogroup, groupWith, join, leftOuterJoin, rightOuterJoin, groupByKey, reduceByKey, combineByKey, partitionBy, sort, mapValues, flatMapValues and filter.
 
 All other operations will produce result with no partitioner.
+
+### Stages and Task
+When map() transformation is run om dataset, a single stage of tasks is launched. A stage is a group of tasks that all perform the same computation, but on different input data. One task is launched for each partitition.
