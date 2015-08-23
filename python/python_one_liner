@@ -1,0 +1,17 @@
+Sorting the Dictionary
+By Key
+sorted(dictionary.iteritems(),key=operator.itemgetter(1))
+
+By Value
+sorted(dictionary.iteritems(),key=operator.itemgetter(0))
+
+Sort by value and then ascending order of key
+sorted(dictionary.iteritems(),key = lambda(k,v):(-v,k), reverse  = True )
+
+
+Sorting list based on another list
+
+sorted(zip(X,Y))
+
+Removing repeating characcter from string
+print("".join(c.OrderedDict.fromkeys(string)))
